@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /** Program that allows a person to use the Java Swing GUI as a 4 function calculator
- * @author Monty */
+ * @author Monty a.k.a MintyTheCoder */
 public class SwingCalculator 
 {
 	//create a JFrame Object
@@ -18,12 +18,12 @@ public class SwingCalculator
 	static final JTextField textInput1 = new JTextField("Enter Your First Integer");
 	static final JTextField textInput2 = new JTextField("Enter Your Second Integer");
 
+	//create an object out of the ConsoleCalculator script
 	static ConsoleCalculator calculator = new ConsoleCalculator();
 	public static void main(String[] args) 
 	{
 		JOptionPane.showMessageDialog(null, "Enter Both Numbers Then Press The Function You Want");
 		setup();
-		//SwingCalculator calculator = new SwingCalculator();
 	}
 
 	public static void setup()
@@ -52,21 +52,11 @@ public class SwingCalculator
 		multiplication.addActionListener(multiplyButton);
 		division.addActionListener(divideButton);
 		
+		//connects Action Listeners to corresponding text fields
 		textInput1.addActionListener(text1);
 		textInput2.addActionListener(text2);
 
-		// adding the buttons to frame
-		calcBox.add(addition); 
-		calcBox.add(subtraction); 
-		calcBox.add(multiplication); 
-		calcBox.add(division);
-
-
-
-
-		// parameter less constructor is used  
-		// therefore, alignment is center   
-		// horizontal as well as the vertical gap is 5 units.  
+		//adds buttons to window/GUI
 		calcBox.add(textInput1);
 		calcBox.setLayout(new FlowLayout());    
 		calcBox.add(addition); 
@@ -77,8 +67,10 @@ public class SwingCalculator
 
 
 
-
-		calcBox.setSize(300, 300);    
+		//sets the size of the window/GUI
+		calcBox.setSize(300, 300);
+		
+		//allows the window to be visible
 		calcBox.setVisible(true);
 	}
 
@@ -88,7 +80,9 @@ public class SwingCalculator
 		//specialized method for listening for events
 		public void actionPerformed(ActionEvent buttonPress)
 		{
-			//add code here for what happens when button 1 is pressed
+			//what happens when button is pressed
+			//sets the number1 variable to what the user puts in the text box
+			//Float.parseFloat changes input from a String to a float
 			ConsoleCalculator.number1 = Float.parseFloat(textInput1.getText());		
 		}
 	}
@@ -98,7 +92,9 @@ public class SwingCalculator
 		//specialized method for listening for events
 		public void actionPerformed(ActionEvent buttonPress)
 		{
-			//add code here for what happens when button 1 is pressed
+			//what happens when button is pressed
+			//sets the number2 variable to what the user puts in the text box
+			//Float.parseFloat changes input from a String to a float
 			ConsoleCalculator.number2 = Float.parseFloat(textInput2.getText());
 		}
 	}
@@ -108,7 +104,7 @@ public class SwingCalculator
 		//specialized method for listening for events
 		public void actionPerformed(ActionEvent buttonPress)
 		{
-			//add code here for what happens when button 1 is pressed
+			//what happens when button is pressed
 			System.out.println("Addition Selected");
 			calculator.doSum();
 			JLabel label = new JLabel(Float.toString(ConsoleCalculator.answer));
@@ -125,11 +121,13 @@ public class SwingCalculator
 		//specialized method for listening for events
 		public void actionPerformed(ActionEvent buttonPress)
 		{
-			//add code here for what happens when button 1 is pressed
+			//what happens when button is pressed
 			System.out.println("Subtraction Selected");
 			calculator.doDifference();
 			JLabel label = new JLabel(Float.toString(ConsoleCalculator.answer));
 			calcBox.add(label);
+			
+			//reloads the GUI
 			calcBox.invalidate();
 			calcBox.validate();
 			calcBox.repaint();
@@ -142,10 +140,14 @@ public class SwingCalculator
 		//specialized method for listening for events
 		public void actionPerformed(ActionEvent buttonPress)
 		{
-			//add code here for what happens when button 1 is pressed
+			//what happens when button is pressed
 			System.out.println("Multiplication Selected");
 			calculator.doProduct();
+			
+			//creates new text to display answer
 			JLabel label = new JLabel(Float.toString(ConsoleCalculator.answer));
+			
+			//reloads the GUI
 			calcBox.add(label);
 			calcBox.invalidate();
 			calcBox.validate();
@@ -158,11 +160,15 @@ public class SwingCalculator
 		//specialized method for listening for events
 		public void actionPerformed(ActionEvent buttonPress)
 		{
-			//add code here for what happens when button 1 is pressed
+			//what happens when button is pressed
 			System.out.println("Division Selected");
 			calculator.doQuotient();
+			
+			//creates new text to display answer
 			JLabel label = new JLabel(Float.toString(ConsoleCalculator.answer));
 			calcBox.add(label);
+			
+			//reloads the GUI
 			calcBox.invalidate();
 			calcBox.validate();
 			calcBox.repaint();

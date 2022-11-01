@@ -3,7 +3,7 @@ package JavaCalculators;
 import java.util.Scanner;
 
 /** Program that allows a person to use the Java console as a 4 function calculator 
- * @author Monty & Brodie*/
+ * @author Monty a.k.a MintyTheCoder & Brodie*/
 public class ConsoleCalculator 
 {
 	/** a float variable to store a number given by the user */
