@@ -1,1 +1,5 @@
-*.html text
+*.html linguist-detectable=false
+*.htm inguist-detectable=false
+
+*.css linguist-detectable=false
+*.js inguist-detectable=false
