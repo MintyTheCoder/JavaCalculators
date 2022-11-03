@@ -75,6 +75,7 @@ public class SwingCalculator
 	}
 
 	//private inner class to listen for button presses
+	/** Action that will happen when enter is pressed on the TextField*/
 	private static class TextListener1 implements ActionListener
 	{
 		//specialized method for listening for events
@@ -87,6 +88,7 @@ public class SwingCalculator
 		}
 	}
 	
+	/** Action that will happen when enter is pressed on the TextField*/
 	private static class TextListener2 implements ActionListener
 	{
 		//specialized method for listening for events
@@ -99,6 +101,8 @@ public class SwingCalculator
 		}
 	}
 	
+	//private inner class to listen for button presses
+	/** Action that will happen when the addition button is pressed*/
 	private static class AdditionListener implements ActionListener
 	{
 		//specialized method for listening for events
@@ -116,6 +120,7 @@ public class SwingCalculator
 	}
 
 	//private inner class to listen for button presses
+	/** Action that will happen when the subtraction button is pressed*/
 	private static class SubtractionListener implements ActionListener
 	{
 		//specialized method for listening for events
@@ -135,6 +140,7 @@ public class SwingCalculator
 	}
 
 	//private inner class to listen for button presses
+	/** Action that will happen when the multiplication button is pressed*/
 	private static class MultiplicationListener implements ActionListener
 	{
 		//specialized method for listening for events
@@ -155,6 +161,7 @@ public class SwingCalculator
 		}
 	}
 	//private inner class to listen for button presses
+	/** Action that will happen when the division button is pressed*/
 	private static class DivisionListener implements ActionListener
 	{
 		//specialized method for listening for events
