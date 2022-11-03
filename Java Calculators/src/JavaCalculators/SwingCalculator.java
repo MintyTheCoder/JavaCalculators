@@ -22,7 +22,7 @@ public class SwingCalculator
 	static ConsoleCalculator calculator = new ConsoleCalculator();
 	public static void main(String[] args) 
 	{
-		JOptionPane.showMessageDialog(null, "Enter Both Numbers Then Press The Function You Want");
+		JOptionPane.showMessageDialog(null, "Enter Both Numbers, Press The Enter/Return Key, Then Press The Function You Want");
 		setup();
 	}
 
