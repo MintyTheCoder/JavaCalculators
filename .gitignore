@@ -21,6 +21,7 @@ local.properties
 .classpath
 .settings/
 .loadpath
+/doc/*
 
 # External tool builders
 .externalToolBuilders/
