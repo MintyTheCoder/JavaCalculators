@@ -15,8 +15,8 @@ public class SwingCalculator
 	static JFrame calcBox;
 	
 	//create 2 text boxes for text input
-	static final JTextField textInput1 = new JTextField("Enter Your First Integer");
-	static final JTextField textInput2 = new JTextField("Enter Your Second Integer");
+	static final JTextField intInput1 = new JTextField("Enter Your First Integer");
+	static final JTextField intInput2 = new JTextField("Enter Your Second Integer");
 
 	//create an object out of the ConsoleCalculator script
 	static ConsoleCalculator calculator = new ConsoleCalculator();
@@ -53,17 +53,17 @@ public class SwingCalculator
 		division.addActionListener(divideButton);
 		
 		//connects Action Listeners to corresponding text fields
-		textInput1.addActionListener(text1);
-		textInput2.addActionListener(text2);
+		intInput1.addActionListener(text1);
+		intInput2.addActionListener(text2);
 
 		//adds buttons to window/GUI
-		calcBox.add(textInput1);
+		calcBox.add(intInput1);
 		calcBox.setLayout(new FlowLayout());    
 		calcBox.add(addition); 
 		calcBox.add(subtraction); 
 		calcBox.add(multiplication); 
 		calcBox.add(division);
-		calcBox.add(textInput2);
+		calcBox.add(intInput2);
 
 
 
@@ -84,7 +84,7 @@ public class SwingCalculator
 			//what happens when button is pressed
 			//sets the number1 variable to what the user puts in the text box
 			//Float.parseFloat changes input from a String to a float
-			ConsoleCalculator.number1 = Float.parseFloat(textInput1.getText());		
+			ConsoleCalculator.number1 = Float.parseFloat(intInput1.getText());		
 		}
 	}
 	
@@ -97,7 +97,7 @@ public class SwingCalculator
 			//what happens when button is pressed
 			//sets the number2 variable to what the user puts in the text box
 			//Float.parseFloat changes input from a String to a float
-			ConsoleCalculator.number2 = Float.parseFloat(textInput2.getText());
+			ConsoleCalculator.number2 = Float.parseFloat(intInput2.getText());
 		}
 	}
 	
@@ -110,9 +110,10 @@ public class SwingCalculator
 		{
 			//what happens when button is pressed
 			System.out.println("Addition Selected");
-			calculator.doSum();
-			JLabel label = new JLabel(Float.toString(ConsoleCalculator.answer));
+			//calculator.doSum();
+			JLabel label = new JLabel(" = " + calculator.doSum());
 			calcBox.add(label);
+			
 			calcBox.invalidate();
 			calcBox.validate();
 			calcBox.repaint();
@@ -128,8 +129,7 @@ public class SwingCalculator
 		{
 			//what happens when button is pressed
 			System.out.println("Subtraction Selected");
-			calculator.doDifference();
-			JLabel label = new JLabel(Float.toString(ConsoleCalculator.answer));
+			JLabel label = new JLabel(" = " + calculator.doDifference());
 			calcBox.add(label);
 			
 			//reloads the GUI
@@ -148,10 +148,9 @@ public class SwingCalculator
 		{
 			//what happens when button is pressed
 			System.out.println("Multiplication Selected");
-			calculator.doProduct();
 			
 			//creates new text to display answer
-			JLabel label = new JLabel(Float.toString(ConsoleCalculator.answer));
+			JLabel label = new JLabel(" = " + calculator.doProduct());
 			
 			//reloads the GUI
 			calcBox.add(label);
@@ -169,10 +168,10 @@ public class SwingCalculator
 		{
 			//what happens when button is pressed
 			System.out.println("Division Selected");
-			calculator.doQuotient();
+			
 			
 			//creates new text to display answer
-			JLabel label = new JLabel(Float.toString(ConsoleCalculator.answer));
+			JLabel label = new JLabel(" = " + calculator.doQuotient());
 			calcBox.add(label);
 			
 			//reloads the GUI

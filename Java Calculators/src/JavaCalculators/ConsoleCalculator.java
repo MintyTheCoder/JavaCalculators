@@ -3,17 +3,13 @@ package JavaCalculators;
 import java.util.Scanner;
 
 /** Program that allows a person to use the Java console as a 4 function calculator 
- * @author Monty a.k.a MintyTheCoder & Brodie*/
+ * @author Monty a.k.a MintyTheCoder*/
 public class ConsoleCalculator 
 {
 	/** a float variable to store a number given by the user */
 	// float is a number with decimals
 	//declares two float variables to store numbers given by the user
 	public static float number1, number2; 
-
-	/** a float variable to store the outcome of the function used between number1 and number2 */
-	// declares a float variable to store the outcome of the function executed between number1 and number2
-	public static float answer;
 
 	/**  a String variable to store/know what function is given by the user */
 	//declares a string variable to store the function given by the user
@@ -41,7 +37,7 @@ public class ConsoleCalculator
 		System.out.println("Please enter the second number");
 
 		//store the number in the variable number2
-		number2 =  keyboard.nextFloat();
+		number2 = keyboard.nextFloat();
 
 		//print blank line
 		System.out.println(" ");
@@ -49,42 +45,50 @@ public class ConsoleCalculator
 
 	/** a method to add the numbers from getNumbers and print the sum in the console*/
 	//creates a method to add the numbers from getNumbers and print the sum in the console
-	public void doSum()
+	public float doSum()
 	{
 		//getNumbers();
-		answer = number1 + number2;
+		float sum;
+		sum = number1 + number2;
 		System.out.println("The sum of your two numbers is:");
-		System.out.println(answer);
+		System.out.println(sum);
+		return sum;
 	}
 
 	/** a method to multiply the numbers from getNumbers and print the product in the console*/
 	//creates a method to multiply the numbers from getNumbers and print the product in the console
-	public void doProduct()
+	public float doProduct()
 	{
 		//getNumbers();
-		answer = number1 * number2;
+		float product;
+		product = number1 * number2;
 		System.out.println("The product of your two numbers is:");
-		System.out.println(answer);
+		System.out.println(product);
+		return product;
 	}
 
 	/** a method to subtract the numbers from getNumbers and print the difference in the console*/
 	//creates a method to subtract the numbers from getNumbers and print the difference in the console
-	public void doDifference()
+	public float doDifference()
 	{
 		//getNumbers();
-		answer = number1 - number2;
+		float difference;
+		difference = number1 - number2;
 		System.out.println("The difference between your two numbers is:");
-		System.out.println(answer);
+		System.out.println(difference);
+		return difference;
 	}
 
 	/** a method to divide the numbers from getNumbers and print the quotient in the console*/
 	//create a method to divide the numbers from getNumbers and print the quotient in the console
-	public void doQuotient()
+	public float doQuotient()
 	{
 		//getNumbers();
-		answer = number1 / number2;
+		float quotient;
+		quotient = number1 / number2;
 		System.out.println("The quotient of your two numbers is:");
-		System.out.println(answer);
+		System.out.println(quotient);
+		return quotient;
 	}
 
 	/** main method that every Java project must have,
