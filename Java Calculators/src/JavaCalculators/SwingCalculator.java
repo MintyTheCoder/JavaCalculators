@@ -1,9 +1,8 @@
 package JavaCalculators;
 
 import javax.swing.*;
-
 import java.awt.FlowLayout;
-//import java.util.Scanner;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,7 +11,7 @@ import java.awt.event.ActionListener;
 public class SwingCalculator 
 {
 	//create a JFrame Object
-	static JFrame calcBox;
+	public static JFrame calcBox;
 	
 	//create 2 text boxes for text input
 	static final JTextField intInput1 = new JTextField("Enter Your First Integer");
@@ -28,10 +27,11 @@ public class SwingCalculator
 
 	public static void setup()
 	{
-		// creating a frame object  
+		// creating a frame object
 		calcBox = new JFrame(); 
 		calcBox.setSize(500,500);
-		// creating the buttons  
+		
+		// creating the buttons
 		JButton addition = new JButton("+");    
 		JButton subtraction = new JButton("-");    
 		JButton multiplication = new JButton("×");    
@@ -51,6 +51,7 @@ public class SwingCalculator
 		subtraction.addActionListener(subtractButton);
 		multiplication.addActionListener(multiplyButton);
 		division.addActionListener(divideButton);
+	
 		
 		//connects Action Listeners to corresponding text fields
 		intInput1.addActionListener(text1);
@@ -63,9 +64,7 @@ public class SwingCalculator
 		calcBox.add(subtraction); 
 		calcBox.add(multiplication); 
 		calcBox.add(division);
-		calcBox.add(intInput2);
-
-
+		calcBox.add(intInput2); 
 
 		//sets the size of the window/GUI
 		calcBox.setSize(300, 300);
@@ -73,7 +72,8 @@ public class SwingCalculator
 		//allows the window to be visible
 		calcBox.setVisible(true);
 	}
-
+	
+	
 	//private inner class to listen for button presses
 	/** Action that will happen when enter is pressed on the TextField*/
 	private static class TextListener1 implements ActionListener
@@ -110,7 +110,7 @@ public class SwingCalculator
 		{
 			//what happens when button is pressed
 			System.out.println("Addition Selected");
-			//calculator.doSum();
+			
 			JLabel label = new JLabel(" = " + calculator.doSum());
 			calcBox.add(label);
 			

@@ -47,7 +47,6 @@ public class ConsoleCalculator
 	//creates a method to add the numbers from getNumbers and print the sum in the console
 	public float doSum()
 	{
-		//getNumbers();
 		float sum;
 		sum = number1 + number2;
 		System.out.println("The sum of your two numbers is:");
@@ -59,7 +58,6 @@ public class ConsoleCalculator
 	//creates a method to multiply the numbers from getNumbers and print the product in the console
 	public float doProduct()
 	{
-		//getNumbers();
 		float product;
 		product = number1 * number2;
 		System.out.println("The product of your two numbers is:");
@@ -71,7 +69,6 @@ public class ConsoleCalculator
 	//creates a method to subtract the numbers from getNumbers and print the difference in the console
 	public float doDifference()
 	{
-		//getNumbers();
 		float difference;
 		difference = number1 - number2;
 		System.out.println("The difference between your two numbers is:");
@@ -83,7 +80,6 @@ public class ConsoleCalculator
 	//create a method to divide the numbers from getNumbers and print the quotient in the console
 	public float doQuotient()
 	{
-		//getNumbers();
 		float quotient;
 		quotient = number1 / number2;
 		System.out.println("The quotient of your two numbers is:");
